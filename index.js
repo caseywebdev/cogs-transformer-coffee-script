@@ -1,8 +1,5 @@
-var coffee = require('coffee-script');
+const coffee = require('coffee-script');
 
-module.exports = function (file, options, cb) {
-  var source = file.buffer.toString();
-  try { source = coffee.compile(source, options); }
-  catch (er) { return cb(er); }
-  cb(null, {buffer: new Buffer(source)});
-};
+module.exports = ({file: {buffer}, options}) => ({
+  buffer: Buffer.from(coffee.compile(buffer.toString(), options))
+});

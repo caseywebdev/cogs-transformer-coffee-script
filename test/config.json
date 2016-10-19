@@ -1,13 +1,8 @@
 {
-  "in": {
-    "coffee": {
-      "out": "js",
-      "transformers": {
-        "name": ".",
-        "options": {
-          "bare": true
-        }
-      }
+  "transformers": {
+    "name": ".",
+    "options": {
+      "bare": true
     }
   }
 }
